@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jane Bloglife</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Navbar */
+        .box {
+            height: 50px;
+            background-color: #212529;
+            width: 100%;
+        }
+
+        .box1 {
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        .box2 {
+            padding: 15px;
+            font-size: 15px;
+            float: right;
+            cursor: pointer;
+        }
+
+        /* Header */
+        .box3 {
+            min-height: 200px;
+            background-color: white;
+            width: 100%;
+        }
+
+        .box4 {
+            padding-top: 60px;
+        }
+
+        /* Background Image */
+        .backimg {
+            width: 100%;
+            height: 1000px;
+            background-image: url('https://www.w3schools.com/w3images/jane.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            padding: 40px;
+        }
+
+        .box5 {
+            padding-left: 0;
+            font-size: 70px;
+            margin-top: 10px;
+        }
+
+        .box6 {
+            background-color: #e6dfdf;
+            border: none;
+            height: 50px;
+            width: 150px;
+            border-radius: 5px;
+        }
+
+        .box6:hover {
+            background-color: #ccc;
+        }
+
+        /* Content */
+        .content-section {
+            padding: 15px;
+        }
+
+        .box7 {
+            padding: 20px;
+        }
+
+        .post-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Like and Reply Buttons */
+        .button-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .like {
+            background-color: white;
+            color: black;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            border-radius: 5px;
+            min-height: 45px;
+        }
+
+        .like:hover {
+            color: white;
+            background-color: grey;
+        }
+
+        .reply {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            min-height: 45px;
+        }
+
+        .reply:hover {
+            background-color: grey;
+        }
+
+        /* Comment */
+        .comment {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .image {
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .box5 {
+                font-size: 40px;
+            }
+
+            .backimg {
+                height: 450px;
+                padding: 20px;
+                background-position: center center;
+            }
+
+            .box4 {
+                padding-top: 40px;
+            }
+
+            .comment {
+                align-items: center;
+            }
+
+            .image {
+                height: 65px;
+                width: 65px;
+            }
+        }
+         .cardbody{
+                height: 200px;
+                margin:20px;
+            }
+        .box10{
+            padding-top: 70px;
+            font-size: 20px;
+        }
+        .tags{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .icon{
+            font-size: 30px;
+        }
+        .lastdiv{
+            height: 150px;
+            width: 100%;
+            background-color: #616161 ;
+        }
+        footer {
+            background: #616161;
+            color: white;
+            padding: 25px 20px;
+        }
+         .top-button {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="bg-dark box">
+
+        <i class="fa-brands fa-square-facebook text-white box1"></i>
+        <i class="fa-brands fa-instagram text-white box1"></i>
+        <i class="fa-brands fa-square-snapchat text-white box1"></i>
+        <i class="fa-brands fa-flickr text-white box1"></i>
+        <i class="fa-brands fa-twitter text-white box1"></i>
+        <i class="fa-brands fa-linkedin text-white box1"></i>
+
+        <i class="fa-solid fa-magnifying-glass text-white box2"></i>
+
+    </div>
+
+    <!-- Header -->
+    <div class="bg-white box3">
+
+        <h1 class="box4 text-center mt-5">
+            JANE BLOGLIFE
+        </h1>
+
+        <h5 class="text-center mt-3">
+            Welcome to the blog of
+            <span class="bg-dark text-white">
+                Jane's world
+            </span>
+        </h5>
+
+    </div>
+
+    <!-- Background Image Section -->
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12 backimg">
+
+                <h2 class="text-white">
+                    Jane's
+                </h2>
+
+                <h1 class="text-white box5">
+                    FASHION BLOG
+                </h1>
+
+                <button class="box6">
+                    SUBSCRIBE
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Blog Content -->
+    <div class="container-fluid mt-4">
+
+        <div class="row">
+
+            <!-- Left Content -->
+            <div class="col-lg-8 col-md-8 col-12 content-section">
+
+                <!-- First Blog Post -->
+                <div class="card box7">
+
+                    <h5 class="text-center">
+                        TITLE HEADING
+                    </h5>
+
+                    <p class="text-center">
+                        <b>Title description</b>, May 2, 2016
+                    </p>
+
+                    <!-- Blog Image -->
+                    <img
+                        src="https://www.w3schools.com/w3images/girl_hat.jpg"
+                        alt="Girl wearing a hat"
+                        class="post-image">
+
+                    <!-- Blog Description -->
+                    <p class="mt-4">
+                        <b>More Hats!</b>
+                        I am crazy about hats these days. Some text about this blog entry.
+                        Fashion fashion and mauris neque quam, fermentum ut nisl vitae,
+                        convallis maximus nisl.
+                    </p>
+
+                    <p>
+                        Sunt in culpa qui officia deserunt mollit
+                        anim id est laborum consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+
+                    <!-- Like and Reply Buttons -->
+                    <div class="button-section">
+
+                        <button class="like">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            Like
+                        </button>
+
+                        <button class="reply">
+                            Replies
+                            <span class="badge badge-light">1</span>
+                        </button>
+
+                    </div>
+
+                    <hr>
+
+                    <!-- Comment -->
+                    <div class="comment">
+
+                        <img
+                            src="https://www.w3schools.com/w3images/avatar_smoke.jpg"
+                            class="image"
+                            alt="George">
+
+                        <div>
+                            <p class="mb-1">
+                                <b>George</b>
+                                <span class="text-muted">
+                                    May 3, 2015, 6:32 PM
+                                </span>
+                            </p>
+
+                            <h6 class="mb-0">
+                                Great blog post! Following
+                            </h6>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Second Blog Post -->
+                <div class="card box7 mt-4">
+
+                    <h5 class="text-center">
+                        TITLE HEADING
+                    </h5>
+
+                    <p class="text-center">
+                        <b>Title description</b>, April 23, 2016
+                    </p>
+
+                    <!-- Blog Image -->
+                    <img
+                        src="https://www.w3schools.com/w3images/man_hat.jpg"
+                        alt="Man wearing a hat"
+                        class="post-image">
+
+                    <!-- Blog Description -->
+                    <p class="mt-4">
+                        <b>Hats!</b>
+                        The trend this summer is hats for men!
+                    </p>
+
+                    <p>
+                        Some text about this blog entry. Fashion fashion and mauris neque quam,
+                        fermentum ut nisl vitae, convallis maximus nisl.
+                    </p>
+
+                    <!-- Like and Reply Buttons -->
+                    <div class="button-section">
+
+                        <button class="like">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            Like
+                        </button>
+
+                        <button class="reply">
+                            Replies
+                            <span class="badge badge-light">2</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                 <div class="card box7 mt-4">
+
+                    <h5 class="text-center">
+                        TITLE HEADING
+                    </h5>
+
+                    <p class="text-center">
+                        <b>Title description</b>,April 7, 2016
+                    </p>
+
+                    <!-- Blog Image -->
+                    <img
+                        src="https://www.w3schools.com/w3images/runway.jpg"
+                        alt="Man wearing a hat"
+                        class="post-image">
+
+                    <!-- Blog Description -->
+                    <p class="mt-4">
+                        <b>Don't miss!!</b>
+                       The runway in New York City this weekend is going to be legendary!
+
+
+                    </p>
+
+                    <p>
+                        Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl.
+                    </p>
+
+                    <!-- Like and Reply Buttons -->
+                    <div class="button-section">
+
+                        <button class="like">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            Like
+                        </button>
+
+                        <button class="reply">
+                            Replies
+                            <span class="badge badge-light">3</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-lg-4 col-md-4 col-12">
+
+                <div class="card mt-3">
+                    <div class="card-header p-0 bg-dark">
+
+                        <img src="https://www.w3schools.com/w3images/avatar_girl2.jpg" class="w-100 " >
+
+                        <h5 class="text-white p-2">My Name</h5>
+
+                        <p class="text-white p-2">Just me, myself and I, exploring the universe of unknownment.
+                             I have a heart of love and an interest in lorem ipsum and mauris neque quam blog.</p>
+                    </div>
+                   
+                </div>
+
+                <div class="card mt-5">
+
+                <div class="card-header bg-dark text-white ">
+                          <h5>Popular Posts</h5>
+                </div>
+
+                     <div class="card-body">
+
+                    <div class="media align-items-center">
+                         <img src="https://www.w3schools.com/w3images/avatar_smoke.jpg"
+                           width="60" height="60" class="mr-3">
+                    <div>
+
+                        <h5>Denim</h5>
+                        <p class="mb-0">Sed mattis nunc</p>
+                     </div>
+                     </div>
+
+                    <hr>
+
+                    <div class="media align-items-center">
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg"
+                        width="60" height="60" class="mr-3">
+                    <div>
+                            <h5>Sweaters</h5>
+                            <p class="mb-0">Praes tinci sed</p>
+                    </div>
+                    </div>
+
+        <hr>
+
+                    <div class="media align-items-center">
+                        <img src="https://www.w3schools.com/w3images/workshop.jpg"
+                         width="60" height="60" class="mr-3">
+                        <div>
+                            <h5>Workshop</h5>
+                            <p class="mb-0">Ultricies congue</p>
+                        </div>
+                    </div>
+
+                <hr>
+
+                <div class="media align-items-center">
+                    <img src="https://www.w3schools.com/w3images/rock.jpg"
+                      width="60" height="60" class="mr-3">
+                  <div>
+                        <h5>Trends</h5>
+                        <p class="mb-0">Lorem ipsum dipsum</p>
+                 </div>
+                </div>
+
+             </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="card-header bg-dark">
+                    <h5 class="text-white"> Advertise</h5>
+                </div>
+                <div class="card-body bg-light text-center cardbody ">
+                    <h6 class="box10" >Your AD Here</h6>
+                </div>
+            </div>
+            
+
+            <div class="card mt-5">
+                <div class="card-header bg-dark">
+                    <h5 class="text-white">Tags</h5>
+                </div>
+
+                <div class="card-body tags">
+
+                    <spa class="bg-dark text-white">Fashion</spa>
+                    <span class="bg-light">New York</span>
+                    <span class="bg-light">London</span>
+                    <span class="bg-light"> Hats</span>
+                    <span class="bg-light">Norway</span>
+                    <span class="bg-light"> Sweaters</span><br>
+                    <span class="bg-light">Ideas</span>
+                    <span class="bg-light">Deals</span>
+                    <span class="bg-light">Accessories</span>
+                    <span class="bg-light">News</span>
+                    <span class="bg-light">Clothing</span>
+                    <span class="bg-light">Shopping</span>
+                    <span class="bg-light">Jeans</span><br>
+                    <span class="bg-light">Trends</span>
+                </div>
+            </div>
+
+
+             <div class="card mt-4">
+                <div class="card-header bg-dark">
+                    <h4 class="text-white">Inspiration</h4>
+                </div>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="https://www.w3schools.com/w3images/jeans.jpg" class="w-100">
+                        </div>
+
+                        <div class="col-6">
+                            <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" class="w-100">
+                        </div>
+                    </div>
+
+                     <div class="row mt-3">
+                        <div class="col-6">
+                            <img src="https://www.w3schools.com/w3images/team1.jpg" class="w-100">
+                        </div>
+
+                        <div class="col-6">
+                            <img src="https://www.w3schools.com/w3images/team4.jpg" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header bg-dark">
+                    <h5 class="text-white">Follow Me</h5>
+                </div>
+
+                <div class="card-body icon">
+
+                    <i class="fa-brands fa-square-facebook"></i>
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                    <i class="fa-brands fa-square-snapchat"></i>
+
+                    <i class="fa-brands fa-pinterest"></i>
+
+                    <i class="fa-brands fa-twitter"></i>
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </div>
+            </div>
+
+            <div class="card mt-4">
+            <div class="card-header bg-dark">
+                <h5 class="text-white">Subscribe</h5>
+            </div>
+            <div class="card-body">
+                <p>Enter your e-mail below and get notified about the latest blog posts.</p>
+
+                <form >
+                    
+                        <input type="text"placeholder="Enter e-mail" class="form-control ">
+                 
+                </form>
+
+                <button class="btn btn-danger btn-block mt-3"> subscribe</button>
+            </div>
+        </div>
+            
+        </div>
+
+        
+
+        
+
+        </div>
+
+    </div>
+     <footer>
+
+        <a href="#top" class="top-button">
+            <i class="fa fa-arrow-up"></i>
+            &nbsp; To the top
+        </a>
+
+        <p>Powered by w3.css</p>
+
+    </footer>
+
+</body>
+
+</html>
